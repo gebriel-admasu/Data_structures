@@ -1,7 +1,9 @@
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
-        res = {}
-        for num in nums:
-            res[num] = res.get(num,0) +1
-        return [key for key, value in res.items() if value == 2]
+        res = Counter(nums)
+        output = []
+        for i in res:
+            if res[i] == 2:
+                output.append(i)
 
+        return output
