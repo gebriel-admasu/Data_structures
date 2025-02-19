@@ -16,8 +16,6 @@ class Solution:
                     prefix[diff] = i
 
 
-
-
                 if count_o == count_l:
 
                     res = count_o + count_l
