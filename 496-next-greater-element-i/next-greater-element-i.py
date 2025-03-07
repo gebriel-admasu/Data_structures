@@ -11,6 +11,6 @@ class Solution:
           
             stack.append(nums)
 
-   
+
       
         return [next_greater_mapping.get(num, -1) for num in nums1]
