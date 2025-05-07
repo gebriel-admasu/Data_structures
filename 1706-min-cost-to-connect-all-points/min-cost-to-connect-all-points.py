@@ -35,8 +35,13 @@ class Solution:
                 res.append((cost,i,j))
         res.sort()
         total = 0
+        num_edge_add = 0
         for cost,u,v in res:
             if not uf.connected(u,v):
                 uf.union(u,v)
                 total += cost
+                num_edge_add +=1
+                if num_edge_add == n-1:
+                    break
+
         return total
